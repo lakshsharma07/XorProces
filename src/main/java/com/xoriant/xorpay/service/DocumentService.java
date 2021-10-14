@@ -2932,15 +2932,15 @@ public class DocumentService {
 		GroupHeader32 GrpHdr = new GroupHeader32();
 		GroupHeader32 docGrpHdr = doc.getCstmrCdtTrfInitn().getGrpHdr();
 		// watermark
-		BranchAndFinancialInstitutionIdentification4 fwdAgt = new BranchAndFinancialInstitutionIdentification4();
+		//BranchAndFinancialInstitutionIdentification4 fwdAgt = new BranchAndFinancialInstitutionIdentification4();
 		FinancialInstitutionIdentification7 finIns = new FinancialInstitutionIdentification7();
 		if (null != configPojo.getSrcSys().getWatermark()) {
 			finIns.setNm(configPojo.getSrcSys().getWatermark());
 		} else {
 			finIns.setNm("Dummy" + configPojo.getSrcSys().getSrcSystemSort());
 		}
-		fwdAgt.setFinInstnId(finIns);
-		GrpHdr.setFwdgAgt(fwdAgt);
+		//fwdAgt.setFinInstnId(finIns);
+		//GrpHdr.setFwdgAgt(fwdAgt);
 
 		if (null != docGrpHdr.getMsgId() && isTagPresent(tagSeqMap, PAIN001Constant.MSGID_4)) {
 			GrpHdr.setMsgId(tagSeqMap.get(PAIN001Constant.MSGID_4));
